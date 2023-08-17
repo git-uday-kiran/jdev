@@ -1,0 +1,5 @@
+spring:
+  activemq:
+    user: admin
+    password: admin
+    broker-url: ${ACTIVEMQ_ARTEMIS_HOST:localhost}:${ACTIVEMQ_ARTEMIS_PORT:61616}

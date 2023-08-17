@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Excel To Messages</title>
+    <style>
+        .root {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            min-height: 70vh;
+        }
+
+        .form {
+            /*border: 1px solid red;*/
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            padding: 20px;
+            border-radius: 3px;
+            border: 1px solid grey;
+        }
+
+        .form > * {
+            min-width: 250px;
+        }
+
+        #size-label {
+            border: 1px solid grey;
+            border-radius: 2px;
+            padding: 1px 6px;
+            width: 100%;
+            text-align: center;
+        }
+
+        #size-input {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+    </style>
+</head>
+<body>
+<div class="root">
+    <form class="form" id="uploadForm">
+        <div id="size-input">
+            <label for="size" id="size-label">size</label>
+            <input type="number" name="size" id="size"/>
+        </div>
+        <input type="file" name="file" id="fileInput"/>
+        <button type="submit" class="submit-button" style="background-color: green; color: white; border-radius: 5px">Submit</button>
+    </form>
+    <div id="error" style="display: none">
+        <h5>error message</h5>
+    </div>
+</div>
+</body>
+<script>
+    const errorEle = document.getElementById("error");
+    const errorStyle = errorEle.style;
+
+    const form = document.getElementById("uploadForm");
+    const fileInput = document.getElementById("fileInput");
+
+    form.addEventListener("submit", async (event) => {
+        errorStyle.display = "none";
+        event.preventDefault();
+
+        const formData = new FormData();
+        formData.append("file", fileInput.files[0]);
+
+        const response = await fetch(`http://localhost:8080/excel-to-message?size=${new FormData(form).get("size")}`, {
+            method: "POST",
+            body: formData,
+        });
+
+        try {
+
+            if (!response.ok) {
+                throw new Error("Uploading file, " + await response.text());
+            }
+
+            const fileData = await response.blob();
+            const downloadUrl = URL.createObjectURL(fileData);
+            const downloadLink = document.createElement("a");
+            downloadLink.href = downloadUrl;
+            downloadLink.download = "message.properties"; // Set the desired file name
+            downloadLink.click();
+        } catch (error) {
+            console.error(error);
+            errorStyle.display = "inline";
+            errorStyle.color = "red";
+            errorEle.textContent = error;
+        }
+    });
+</script>
+
+</html>

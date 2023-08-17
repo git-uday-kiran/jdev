@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "my-db",
+      "type": "com.jdev.configs.DBConfig",
+      "sourceType": "com.jdev.configs.DBConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "my-db.password",
+      "type": "java.lang.String",
+      "sourceType": "com.jdev.configs.DBConfig"
+    },
+    {
+      "name": "my-db.user-name",
+      "type": "java.lang.String",
+      "sourceType": "com.jdev.configs.DBConfig"
+    }
+  ],
+  "hints": []
+}

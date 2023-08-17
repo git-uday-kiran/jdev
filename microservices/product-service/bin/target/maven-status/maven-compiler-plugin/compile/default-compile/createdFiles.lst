@@ -1,0 +1,11 @@
+com\jdev\productservice\repository\ProductRepository.class
+com\jdev\productservice\service\ProductService.class
+com\jdev\productservice\model\Product.class
+com\jdev\productservice\dto\ProductResponse.class
+com\jdev\productservice\controller\ProductController.class
+com\jdev\productservice\ProductServiceApplication.class
+com\jdev\productservice\dto\ProductRequest.class
+com\jdev\productservice\dto\ProductResponse$ProductResponseBuilder.class
+com\jdev\productservice\controller\Test.class
+com\jdev\productservice\model\Product$ProductBuilder.class
+com\jdev\productservice\dto\ProductRequest$ProductRequestBuilder.class

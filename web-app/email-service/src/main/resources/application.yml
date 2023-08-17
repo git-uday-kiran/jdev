@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: email-service
+  mail:
+    host: 'smtp.gmail.com'
+    username: udaykiran0486@gmail.com
+    password: aqrqseqwlgxsyosn
+    port: 587
+    default-encoding: UTF-8
+    protocol: smtp
+    test-connection: true
+    properties:
+      mail.smtp.starttls.enable: true
+
+
+server:
+  port: 8085

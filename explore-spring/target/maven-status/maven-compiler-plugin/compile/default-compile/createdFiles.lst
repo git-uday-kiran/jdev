@@ -1,0 +1,12 @@
+com\jdev\BeanTest.class
+com\jdev\rest\interceptors\LoggingInterceptor.class
+com\jdev\App.class
+com\jdev\Controller.class
+com\jdev\rest\Developer.class
+META-INF\spring-configuration-metadata.json
+com\jdev\rest\DeveloperController.class
+com\jdev\AppTest.class
+com\jdev\LifeCycleTest.class
+com\jdev\sockets\SseController.class
+com\jdev\ConfigsTest.class
+com\jdev\rest\config\CustomInterceptorRegistry.class

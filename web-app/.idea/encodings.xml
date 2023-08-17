@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/content-checker/content-checker-service-model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/content-checker/content-checker-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/content-checker/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/content-checker/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/email-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/email/email-service-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/email/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/main-app/main-orm/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/main-app/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/main-app/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
